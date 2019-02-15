@@ -28,27 +28,27 @@
 
     </head>
     <body>
-        <div class="fluid-container m-4 row" ng-app="userApp" ng-controller="userCtrl" ng-init="init()">
-            <div class="col-md-6">
-                <div class="row text-info">
-                    <?php
-                        echo "<h1>You are logged in as " . $user . "<h1>";
-                     ?>
-                     <button class="btn btn-primary" type="button" ng-click="goLogout()">Logout</button>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Find more friends</span>
+        <div class="container-fluid bg-dark" ng-app="userApp" ng-controller="userCtrl" ng-init="init()">
+            <div class="row">
+                <div class="col-md-6 my-3">
+                    <div class="container-fluid">
+                        <h1 class="text-info d-inline float-left">You are logged in as <?php echo $user; ?> <h1>
+                        <button class="btn btn-primary d-inline float-right" type="button" ng-click="goLogout()">Logout</button>
                     </div>
-                    <input class="form-control" type="text" ng-model="pattern" ng-keyup="searchFriend()" ng-click="searchFriend()">
-                    <table class="form-control-text table table-hover">
-                        <tr class="table-info"
-                            ng-repeat="x in friendSugestions" ng-if="$index < 3">
-                            <td>{{x}}</td>
-                        </tr>
-                    </table>
+                </div>
+                <div class="col-md-6 my-3">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Find more friends</span>
+                        </div>
+                        <input class="form-control" type="text" ng-model="pattern" ng-keyup="searchFriend()" ng-click="searchFriend()">
+                        <table class="form-control-text table table-hover">
+                            <tr class="table-info"
+                                ng-repeat="x in friendSugestions" ng-if="$index < 3">
+                                <td>{{x}}</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

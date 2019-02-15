@@ -1,25 +1,15 @@
-.my-btn {
-    transition-duration: 0.2s;
-    color: #ffffff;
-    background-color: #09c62d;
-    font-size: 20px;
-    padding: 10px 25px;
-    border: 0px;
-    border-radius: 15px;
-    margin: 20px;
-}
-.my-btn:hover {
-    color: #e6dada;
-    background-color: #18af34;
-    margin: 18px;
-    padding: 12px 27px;
-    cursor: pointer;
-}
-
 .overflow {
     overflow-x: auto;
 }
-.imgcenter {
-    display: block;
-    margin auto;
+
+.responsive-title {
+    text-align: center;
+    font-size: 50px;
+}
+
+@media (max-width: 992px) {
+    .responsive-title {
+        text-align: center;
+        font-size: 10vw;
+    }
 }

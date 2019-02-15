@@ -29,12 +29,12 @@
     </head>
     <body>
 
-            <div ng-app="guestApp" ng-controller="guestCtrl">
+            <div class="container-fluid bg-light" ng-app="guestApp" ng-controller="guestCtrl">
 
-                <div class="row fluid-container">
+                <div class="row">
 
                     <!-- Register -->
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 my-3">
                         <h1>Register</h1>
                         <form name="rForm" >
                             <input class="form-control col-md-4" type="text" name="rUser" placeholder="Username" pattern=".{3,}" required ng-model="rUser">
@@ -47,7 +47,7 @@
                     </div>
 
                     <!-- Login -->
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 my-3">
                         <h1>Login</h1>
                         <form name="lForm" >
                             <input class="form-control col-md-4" type="text" name="lUser" placeholder="Username" pattern=".{3,}" required ng-model="lUser">
