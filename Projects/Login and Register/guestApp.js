@@ -14,7 +14,7 @@ app.controller("guestCtrl", function($scope, $http) {
         var data = "username=" + $scope.rUser + "&password=" + $scope.rPassword + "&rep_password=" + $scope.repeatP;
         $http.post("./register.php", data, config).then(function(response) {
             if (~~response.data) {
-                window.location.replace("./index_user.php");
+                window.location.replace("./index.php");
             }
         });
     }
@@ -23,7 +23,7 @@ app.controller("guestCtrl", function($scope, $http) {
         var data = "username=" + $scope.lUser + "&password=" + $scope.lPassword + "&persistence=" + $scope.persistence;
         $http.post("./login.php", data, config).then(function(response) {
             if (~~response.data) {
-                window.location.replace("./index_user.php");
+                window.location.replace("./index.php");
             }
         });
     }

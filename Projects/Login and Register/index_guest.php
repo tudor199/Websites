@@ -2,7 +2,7 @@
     session_start();
     $user =  ($_COOKIE["username"] ? $_COOKIE["username"] : $_SESSION["username"]);
     if ($user) {
-        header('LOCATION: ./index_user.php');
+        header('LOCATION: ./index.php');
     }
  ?>
 
@@ -63,7 +63,7 @@
                     </div>
                 </form>
             </div>
-            
+
         </div>
     </div>
 

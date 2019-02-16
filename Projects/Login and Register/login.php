@@ -5,10 +5,12 @@
     if ($conn->connect_error) {
         die(0); // "Connection failed: " . $conn->connect_error
     }
+
     $username = htmlspecialchars($_POST["username"]);
     $password = htmlspecialchars($_POST["password"]);
     $persistence = htmlspecialchars($_POST["persistence"]) === "true";
-    $hash = hash('sha256', $password);
+    $salt = "mySalt";
+    $hash = hash('sha256', $password . $salt);
     $sql = "SELECT * FROM accounts
             WHERE username = '$username' AND hash = '$hash';";
     if ($result = $conn->query($sql)) {

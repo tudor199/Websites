@@ -5,11 +5,12 @@
     if ($conn->connect_error) {
         die(0); // "Connection failed: " . $conn->connect_error
     }
-
+    
     $username = htmlspecialchars($_POST["username"]);
     $password = htmlspecialchars($_POST["password"]);
-    $rep_password = htmlspecialchars($_POST["rep_password"]);
-    $hash = hash('sha256', $password);
+    $rep_password = htmlspecialchars($_POST["rep_password"]) . $salt;
+    $salt = "mySalt";
+    $hash = hash('sha256', $password . $salt);
 
     if ($password != $rep_password) {
         die(0); // "Passwords don`t match!"
