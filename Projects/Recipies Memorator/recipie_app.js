@@ -4,12 +4,12 @@ app.controller("recipieCtrl", function($scope, $http, $timeout) {
 
     $scope.blur_hintTimeout = function() {
         $timeout(function() {
-            $scope.show_hint= false;
+            $scope.show_hint = false;
         }, 100);
     }
     $scope.focus_hintTimeout = function() {
         $timeout(function() {
-            $scope.show_hint= true;
+            $scope.show_hint = true;
         }, 110);
     }
 
@@ -26,9 +26,15 @@ app.controller("recipieCtrl", function($scope, $http, $timeout) {
     }
     $scope.addItem = function() {
         if ((~~$scope.addMeWeight) == 0) {
-            $scope.ingredients.push({name : $scope.addMeName.toLowerCase(), weight : ""});
+            $scope.ingredients.push({
+                name: $scope.addMeName.toLowerCase(),
+                weight: ""
+            });
         } else {
-            $scope.ingredients.push({name : $scope.addMeName.toLowerCase(), weight : $scope.addMeWeight + " g"});
+            $scope.ingredients.push({
+                name: $scope.addMeName.toLowerCase(),
+                weight: $scope.addMeWeight + " g"
+            });
         }
         $scope.addMeName = null;
         $scope.addMeWeight = null;
@@ -47,7 +53,7 @@ app.controller("recipieCtrl", function($scope, $http, $timeout) {
             $scope.hintPattern = "";
         });
     }
-    $scope.clearInputs = function () {
+    $scope.clearInputs = function() {
         $scope.ingredients = [];
         $scope.hintPattern = "";
         $scope.recipieName = "";
@@ -55,17 +61,16 @@ app.controller("recipieCtrl", function($scope, $http, $timeout) {
         $scope.addMeWeight = null;
     }
 
-    $scope.getHint = function (forSearch) {
+    $scope.getHint = function(forSearch) {
         var pattern = (forSearch == "loadHint" ? $scope.hintPattern : $scope.recipieName);
         pattern += "%";
-        console.log(pattern);
         $http.get("./DB_query.php?type=hint&pattern=" + pattern).then(function(response) {
             if (forSearch == "loadHint") {
                 document.getElementById("hint_display").style.top = "113px";
             } else {
                 var hintEl = Math.min(response.data.length, 3);
                 var ingrEl = ($scope.ingredients.length == 0 ? 1 : $scope.ingredients.length);
-                var startPoint = 217;
+                var startPoint = 200;
                 var rowsize = 50;
                 document.getElementById("hint_display").style.top = (startPoint + (ingrEl - hintEl) * rowsize) + "px";
             }

@@ -44,8 +44,7 @@
             if (sizeof($resultarr) == 0) {
                 $sql2 = "INSERT INTO recipies (name, ingredients_json) VALUES ('$name', '$ingredients_json')";
                 echo 0;
-            }
-            else {
+            } else {
                 $sql2 = "UPDATE recipies SET ingredients_json = '$ingredients_json' WHERE name = '$name'";
                 echo 1;
             }
@@ -54,4 +53,3 @@
     }
 
     $conn->close();
-?>

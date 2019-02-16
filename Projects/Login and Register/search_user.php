@@ -3,7 +3,7 @@
     session_start();
     $conn = new mysqli($SQL_hostname, $SQL_username, $SQL_password, $SQL_database);
     if ($conn->connect_error) {
-        die("connection error: " . $conn->connect_error);
+        die(0); // "Connection failed: " . $conn->connect_error
     }
 
     $pattern = htmlspecialchars($_GET["pattern"]);
@@ -21,8 +21,7 @@
         }
         echo json_encode($outp);
     } else {
-        die("query error: " . $conn->error);
+        die(0); // "query error: " . $conn->error
     }
 
     $conn->close();
-?>

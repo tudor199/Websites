@@ -4,8 +4,13 @@
     float: left;
 }
 
+p {
+    text-align: center;
+    margin-top: 26px;
+}
+
 h1 {
-    padding:  10px 5px;
+    padding: 10px 5px;
 }
 
 .hand-cursor {
@@ -15,7 +20,7 @@ h1 {
 #hint_display {
     position: absolute;
     left: 0px;
-    width:308px;
+    width: 308px;
     background-color: white;
     z-index: 100;
 }

@@ -35,4 +35,3 @@
         die(0); // "error 2nd querry: " . $conn->error
     }
     $conn->close();
- ?>

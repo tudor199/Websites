@@ -4,7 +4,11 @@
 }
 
 h1 {
-    padding:  20px 5px;
+    padding: 20px 5px;
+}
+
+p {
+    text-align: center;
 }
 
 #list {
@@ -16,11 +20,12 @@ li.listElement {
     background-color: white;
     display: block;
     border: 1px solid #dddddd;
-    padding: 20px ;
+    padding: 20px;
 }
 
-li.listElement span{
+li.listElement span {
     float: right;
+    cursor: pointer;
 }
 
 #item {

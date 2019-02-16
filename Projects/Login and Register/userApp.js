@@ -1,6 +1,6 @@
 var app = angular.module("userApp", []);
 app.controller("userCtrl", function($scope, $http) {
-    $scope.init = function () {
+    $scope.init = function() {
         $scope.pattern = "";
         $scope.friendSugestions = [];
     }
@@ -12,7 +12,6 @@ app.controller("userCtrl", function($scope, $http) {
 
     $scope.searchFriend = function() {
         var pattern = $scope.pattern + "%";
-        console.log(pattern);
         $http.get("./search_user.php?pattern=" + pattern).then(function(response) {
             $scope.friendSugestions = response.data;
         });
