@@ -3,12 +3,17 @@
 var imgData;
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-var radius = canvas.width / 2;
+var rw = canvas.width / 2;
+var rh = canvas.height / 2;
+var radius = Math.min(rw, rh) * 0.9;
 
 // Mapping in the center
-ctx.translate(radius, radius); // TODO: make oval clock
+ctx.translate(rw, rh);
 
+
+var imgData;
 drawClock();
+setInterval(drawClock, 1000);
 
 
 
@@ -16,14 +21,10 @@ drawClock();
 function drawClock() {
     drawFace();
     drawNumbers();
-
-    imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    drawTime()
-    setInterval(drawTime, 1000);
+    drawTime();
 }
 
 function drawTime() {
-    ctx.putImageData(imgData, 0, 0);
     var dateNow = new Date();
     var hour = dateNow.getHours();
     var seconds = dateNow.getSeconds();
@@ -34,7 +35,7 @@ function drawTime() {
     drawHand(posH, radius * 0.5, radius * 0.07);
 
     var posM = (minutes + seconds / 60) * 12 / 60;
-    drawHand(posM, radius * 0.8, radius * 0.07);
+    drawHand(posM, radius * 0.75, radius * 0.07);
     console.log("M  " + posM * 60 / 12);
 
     var posS = seconds * 12 / 60;
@@ -67,7 +68,6 @@ function drawNumbers() {
 
 function drawFace() {
     // Circle
-    radius *= 0.9;
     drawCircle(radius, "#ffffff");
 
     // Outer circle for clock

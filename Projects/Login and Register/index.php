@@ -24,7 +24,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
     <!-- Local files -->
-    <link rel="stylesheet" href="./lrcss.css">
+    <link rel="stylesheet" href="./style.css">
 
 </head>
 
