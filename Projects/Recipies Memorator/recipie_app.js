@@ -1,6 +1,16 @@
+"use strict";
+
 var app = angular.module("recipieApp", []);
 app.controller("recipieCtrl", function($scope, $http, $timeout) {
-    $scope.show_hint = false;
+
+    $scope.clearInputs = function() {
+        $scope.ingredients = [];
+        $scope.hintPattern = "";
+        $scope.recipieName = "";
+        $scope.addMeName = "";
+        $scope.addMeWeight = null;
+        $scope.show_hint = false;
+    }
 
     $scope.blur_hintTimeout = function() {
         $timeout(function() {
@@ -24,6 +34,7 @@ app.controller("recipieCtrl", function($scope, $http, $timeout) {
     $scope.removeItem = function(idx) {
         $scope.ingredients.splice(idx, 1);
     }
+
     $scope.addItem = function() {
         if ((~~$scope.addMeWeight) == 0) {
             $scope.ingredients.push({
@@ -53,17 +64,11 @@ app.controller("recipieCtrl", function($scope, $http, $timeout) {
             $scope.hintPattern = "";
         });
     }
-    $scope.clearInputs = function() {
-        $scope.ingredients = [];
-        $scope.hintPattern = "";
-        $scope.recipieName = "";
-        $scope.addMeName = "";
-        $scope.addMeWeight = null;
-    }
 
     $scope.getHint = function(forSearch) {
         var pattern = (forSearch == "loadHint" ? $scope.hintPattern : $scope.recipieName);
         pattern += "%";
+        console.log(pattern);
         $http.get("./DB_query.php?type=hint&pattern=" + pattern).then(function(response) {
             if (forSearch == "loadHint") {
                 document.getElementById("hint_display").style.top = "113px";

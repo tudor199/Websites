@@ -10,6 +10,7 @@
 <html lang="en" dir="ltr">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>User</title>
@@ -24,7 +25,6 @@
 
     <!-- Local files -->
     <link rel="stylesheet" href="./lrcss.css">
-    <script src="./userApp.js"></script>
 
 </head>
 
@@ -49,15 +49,17 @@
                     </div>
                     <input class="form-control" type="text" ng-model="pattern" ng-keyup="searchFriend()" ng-click="searchFriend()">
                     <table class="form-control-text table table-hover">
-                        <tr class="table-info" ng-repeat="x in friendSugestions" ng-if="$index < 3">
+                        <tr class="table-info" ng-repeat="x in friendSugestions track by $index" ng-if="$index < 3">
                             <td>{{x}}</td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
-        
+
     </div>
+
+    <script src="./userApp.js"></script>
 
 </body>
 
