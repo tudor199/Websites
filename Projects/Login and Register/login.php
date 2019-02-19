@@ -22,9 +22,9 @@
                 $_SESSION["username"] = $username;
             }
 
-            echo 1; // "Login succesful!"
+            echo 1 . " Login succesful!";
         } else {
-            echo 0; // "Wrong password and username combination!";
+            echo 0 . " Wrong password and username combination!";
         }
     } else {
         die(0); // "error: " . $conn->error

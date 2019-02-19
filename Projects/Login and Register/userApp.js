@@ -1,3 +1,5 @@
+"use strict";
+
 var app = angular.module("userApp", []);
 app.controller("userCtrl", function($scope, $http) {
     $scope.init = function() {
