@@ -42,7 +42,7 @@
                         <input class="form-control col-md-4" type="password" autocomplete="off" placeholder="Password" pattern=".{5,}" required ng-model="rPassword">
                         <input class="form-control col-md-4" type="password" autocomplete="off" placeholder="Repeat Password" pattern=".{5,}" required ng-model="repeatP">
                     </div>
-                    <button class="btn btn-primary" type="button" name="button" ng-click="goRegister()" ng-disabled="rForm.$invalid">Register</button>
+                    <button class="btn btn-primary ml-3" type="button" name="button" ng-click="goRegister()" ng-disabled="rForm.$invalid">Register</button>
                 </form>
             </div>
 
@@ -53,7 +53,7 @@
                     <input class="form-control col-md-4" type="text" name="lUser" placeholder="Username" pattern=".{3,}" required ng-model="lUser">
                     <input class="form-control col-md-4" type="password" autocomplete="off" placeholder="Password" pattern=".{5,}" required ng-model="lPassword">
                     <div class="input-group">
-                        <button class="btn btn-primary" type="button" name="button" ng-click="goLogin()" ng-disabled="lForm.$invalid">Login</button>
+                        <button class="btn btn-primary ml-3" type="button" name="button" ng-click="goLogin()" ng-disabled="lForm.$invalid">Login</button>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <input type="checkbox" id="persistence" ng-model="persistence">
