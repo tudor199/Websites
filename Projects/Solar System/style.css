@@ -4,22 +4,22 @@
 
 h1.text-responsive {
     text-align: center;
-    font-size: 50px;
+    font-size: 3rem;
 }
 
 h2.text-responsive {
     text-align: center;
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 450px) {
     h1.text-responsive {
         text-align: center;
-        font-size: 10vw;
+        font-size: 2rem;
     }
 
     h2.text-responsive {
         text-align: center;
-        font-size: 5vw;
+        font-size: 1rem;
     }
 }
