@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My_website</title>
+
+    <!-- CDNs -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <!-- Local files -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <style media="screen">
+
+
+
+    </style>
+    <header>
+        <a href="https://mail.google.com/mail/?tab=wm">Gmail</a>
+        <a href="https://www.google.ro/imghp?hl=en&tab=wi">Images</a>
+        <div class="icon" onclick="showAppsMenu()">
+            <img src="./apps-menu.svg" alt="GA">
+            <span class="tooltip-box">Google apps</span>
+        </div>
+        <button type="button" onclick="signIn()">Sign in</button>
+    </header>
+
+    <section>
+        <img src="./google-logo.png" alt="Google logo">
+        <div>
+            <textarea id="pattern" rows="1" cols="50"></textarea>
+            <div class="icon">
+                <img src="./keyboard.svg" alt="KB">
+                <span class="tooltip-box">Virtual keyboard</span>
+            </div>
+
+        </div>
+        <div>
+            <button type="button" onclick="search()">Google Search</button>
+            <button type="button" onclick="google()">I'm Felling Lucky</button>
+        </div>
+        <div>Google offered in:
+            <a href="https://www.google.es/">Spanish</a>
+            <a href="https://www.google.de/">Deutsch</a>
+            <a href="https://www.google.ru/">Russian</a>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <div><span>United Kingdom</span></div>
+        </div>
+        <div>
+            <div>
+                <a href="https://www.google.com/intl/en_ro/policies/privacy/?fg=1">Privacy</a>
+                <a href="https://www.google.com/preferences?hl=en">Terms</a>
+                <a href="https://www.google.com/preferences?hl=en">Settings</a>
+            </div>
+            <div>
+                <a href="https://www.google.com/intl/en_ro/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+                <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
+                <a href="https://www.google.com/intl/en_ro/about/?utm_source=google-RO&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./scripts.js"></script>
+
+</body>
+
+</html>
