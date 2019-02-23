@@ -1,9 +1,17 @@
+a {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+}
+
 
 /* header */
 header {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items:flex-start;
 }
 
 header>* {
@@ -11,7 +19,7 @@ header>* {
 }
 
 header>a, header>a:hover {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: black;
 }
 
@@ -91,7 +99,7 @@ header>button:active {
 /* content */
 section {
     margin: auto;
-    margin-top: 5%;
+    margin-top: 15%;
 }
 
 section>* {
@@ -99,31 +107,35 @@ section>* {
     margin: auto;
 }
 
-section>div>textarea {
+#pattern {
+    width: 30rem;
     border: 1px solid #dddddd;
-    padding: 0.3rem 1rem;
-    resize: none;
-    overflow-x: hidden;
-    word-wrap: normal;
+    padding: 0.8rem 0.8rem;
     margin-top: 2em;
-    background-color: white;
+    font-size: 1rem;
     outline: none;
     box-shadow: 0px 2px 7px 3px #f2f2f2;
 }
 
-section>div>textarea:focus, section>div>textarea:hover {
+#pattern:focus, #pattern:hover {
     box-shadow: 0px 2px 7px 3px #e4dfdf;
 }
 
 @media (max-width : 31rem) {
-    section>div>textarea {
+    #pattern {
         width: 300px;
     }
 }
 
+#pattern::-webkit-search-cancel-button{
+-webkit-appearance: none;
+width: 1.6rem;
+z-index: -1;
+}
+
 section>div>.icon {
     position: relative;
-    margin-top: 1.9rem;
+    margin-top: 2.1rem;
     margin-left: -2.3rem;
 }
 
@@ -135,7 +147,7 @@ section>div {
 
 section>div>button {
     box-sizing: border-box;
-    width: 10rem;
+    width: 9rem;
     height: 2rem;
     margin: 1.5rem 0.3rem;
     font-weight: 600;

@@ -3,19 +3,34 @@
     src: url("./klavika-bold.woff");
 }
 
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+}
+
 .logo {
+    position: relative;
     background-color: #3C5B9A;
     grid-area: logo;
 }
+
 .logo>h1 {
     font-family: klavika-bold;
+    position: absolute;
+    bottom: -20px;
     float: left;
-    margin: 0px;
     color: white;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     line-height: 3rem;
-    height: 2.5rem;
+    height: 3rem;
     cursor: pointer;
 }
 
@@ -24,16 +39,68 @@
     grid-area: login;
 }
 
+.login>.flex-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.login>.flex-container>div {
+    margin-top: 10px;
+    color: white;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.login>.flex-container>div>a {
+    color: #98A0B6;
+    margin-top: 3px;
+}
+
+.login>.flex-container>div>* {
+    box-sizing: border-box;
+    width: 140px;
+    height: 25px;
+    margin-right: 15px;
+    outline: none;
+    padding: 2px 0px;
+    display: block;
+}
+
+.login>.flex-container>div>input[type="submit"] {
+    background-color: #4267B2;
+    color: white;
+    width: 60px;
+    margin-right: 0px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #29487D;
+    border-radius: 2px;
+}
+
+.login>.flex-container>div>input[type="submit"]:hover {
+    background-color: #355596;
+}
+
+.login>.flex-container>div>input[type="submit"]:active {
+    background-color: #29487D;
+}
+
 .desc {
     background-color: #EDF0F5;
     grid-area: desc;
 }
 
 .desc>* {
+    margin-top: 2.5rem;
     display: flex;
     align-items: center;
     text-align: left;
 }
+
+.desc>h2 {
+    margin-top: 4rem;
+}
+
 .desc>p>img {
     margin-right: 1rem
 }
@@ -45,7 +112,97 @@
 
 .signup>* {
     text-align: left;
-    background-color: red;
+}
+
+.row {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.col-1 {
+    box-sizing: border-box;
+    padding: 10px 0px;
+    display: inline;
+    width: 48%;
+    /* TODO: solve border sizing */
+}
+
+.col-2 {
+    box-sizing: border-box;
+    padding: 10px 0px;
+    display: inline;
+    width: 100%;
+}
+
+[class*="col-"] {
+    font-size: 1.2rem;
+    outline: none;
+    padding-left: 10px;
+    border: 1px solid #BDC7D8;
+    border-radius: 5px;
+}
+
+.row>a.col-1 {
+    border: none;
+    font-size: 0.8rem;
+    color: #365899;
+}
+
+.signup>form>span {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.signup>form>div>label {
+    font-size: 1.2rem;
+    margin-right: 20px;
+}
+
+.signup>h1 {
+    margin-top: 2rem;
+    line-height: 1rem;
+}
+
+.signup>form>input {
+    cursor: pointer;
+    background-image: linear-gradient(#73B75F, #588C45);
+    color: white;
+    border-color: #3B6E22;
+    border-radius: 5px;
+    margin: 15px 0px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+}
+
+.signup>form>input:hover {
+    background-image: linear-gradient(#87cd73, #588C45);
+}
+
+.signup>form>p {
+    color: #777777;
+    font-size: 0.95rem
+}
+
+.signup>form>p>a {
+    color: #365899;
+}
+
+.signup>p:last-child {
+    font-size: 0.85rem;
+    color: #6A6E80;
+    font-weight: bold;
+    border-top: 1px solid #DDDFE2;
+    padding: 20px 0px;
+}
+
+.signup>p:last-child>a {
+    color: #3B61A4
 }
 
 .footer {
@@ -53,39 +210,87 @@
     grid-area: footer;
 }
 
+.footer>div {
+    font-size: 0.9rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+}
+
+.footer>div:first-child {
+    padding-top: 25px;
+    border-bottom: 1px solid #DDDFE2;
+}
+
+.footer>div>* {
+    white-space: nowrap;
+    margin-right: 0.7rem;
+    color: #3b45b3;
+}
+
+.footer>div>span {
+    color: #737373;
+}
+
 .nothing1 {
-    background-color: #dddddd;
     grid-area: nothing1;
 }
 
 .nothing2 {
-    background-color: #dddddd;
     grid-area: nothing2;
+}
+.nothing3 {
+    grid-area: nothing3;
+}
+.nothing4 {
+    grid-area: nothing4;
+}
+.nothing5 {
+    grid-area: nothing5;
+}
+.nothing6 {
+    grid-area: nothing6;
 }
 
 
+.blue {
+    background-color: #3C5B9A;
+}
+
+.grey {
+    background-color: #EDF0F5;
+}
 .grid-container {
     display: grid;
     grid-template-areas:
         'nothing1 logo login nothing2'
-        'nothing1 desc signup nothing2'
-        'nothing1 footer footer nothing2';
+        'nothing3 desc signup nothing4'
+        'nothing5 footer footer nothing6';
     grid-template-columns: auto 500px 400px auto;
-    background-color: #2196F3;
-    grid-gap: 0px;
 }
 
 .grid-container>div {
     text-align: center;
-    padding: 20px 0;
 }
-/*
-@media (max-width : 10rem) {
-    .grid-container {
-        grid-template-columns: 200px 200px;
-    }
 
-    .item0, .item5 {
-        display: none;
+
+@media (max-width : 900px) {
+    .grid-container {
+        grid-template-areas:
+            'nothing1 logo nothing2'
+            'nothing1 login nothing2'
+            'nothing3 desc nothing4'
+            'nothing3 signup nothing4'
+            'nothing5 footer nothing6';
+        grid-template-columns: auto 365px auto;
     }
-} */
+    .login>.flex-container>div>* {
+        width: 110px;
+    }
+    .login>.flex-container>div>input[type="submit"] {
+        width: 60px;
+    }
+    .logo>h1 {
+        position: relative;
+    }
+}

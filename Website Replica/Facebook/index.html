@@ -13,24 +13,6 @@
 
 </head>
 
-
-
-<style media="screen">
-    .login>.flex-container {
-        display: flex;
-        align-items: center;
-    }
-    .login>.flex-container>div {
-        text-align: left;
-    }
-    .login>.flex-container>div>* { /* TODO: not last child */
-        margin-right: 10px;
-        display: block;
-    }
-</style>
-
-
-
 <body>
     <div class="grid-container">
         <div class="logo">
@@ -39,90 +21,117 @@
         <div class="login">
             <form class="flex-container" action="index.html" method="post">
                 <div>
-                    <label for="email">Email</label>
-                    <input id="email" type="email" name="email" size="15">
+                    <label for="email">Email or phone</label>
+                    <input type="email" name="email" autofocus>
                 </div>
                 <div>
                     <label for="password">Passoword</label>
-                    <input id="password" type="password" name="password" size="15">
+                    <input type="password" name="password">
+                    <a href="#">Forgot password?</a>
                 </div>
                 <div>
-                    <input type="submit">
+                    <label></label>
+                    <input type="submit" value="Log in">
                 </div>
             </form>
-            <!-- TODO: add to css and finish -->
         </div>
-
-
-
-
         <div class="desc">
             <h2>Connect with friends and the<br>world around you on Facebook.</h2>
             <p><img src="./see-post.png" alt="img1"><strong>See photos and updates&nbsp;</strong>from friends in News Feed.</p>
             <p><img src="./share.png" alt="img2"><strong>Share what's new&nbsp;</strong>in your life on your Timeline.</p>
             <p><img src="./find-more.png" alt="img3"><strong>Find more&nbsp;</strong>of what you're looking for with Facebook Search.</p>
         </div>
-
-        <style media="screen">
-            .row {
-                margin-bottom: 10px;
-                display: block;
-                width: 100%;
-                color: green;
-            }
-            .col-1 {
-                box-sizing: border-box;
-                padding: 10px 0px;
-                display: inline;
-                width: 40%; /* TODO: solve border sizing */
-            }
-            .col-2 {
-                box-sizing: border-box;
-                padding: 10px 0px;
-                display: inline;
-                width: 100%;
-            }
-        </style>
-
-
         <div class="signup">
             <h1>Sign Up</h1>
             <p>It’s free and always will be.</p>
             <form action="index.html" method="post">
                 <div class="row">
-                    <input type="text" class="col-1" placeholder="First Name">
-                    <input type="text" class="col-1" placeholder="Last Name">
+                    <input type="text" class="col-1" placeholder="First Name" required value="">
+                    <input type="text" class="col-1" placeholder="Last Name" required>
                 </div>
                 <div class="row">
-                    <input type="text" class="col-2" placeholder="asd">
+                    <input type="text" class="col-2" placeholder="Mobile number or email" required>
                 </div>
                 <div class="row">
-                    <input type="text" class="col-2" placeholder="asd">
+                    <input type="password" class="col-2" placeholder="New password" required>
                 </div>
+                <span>Birthday</span>
                 <div class="row">
-                    <input type="date" class="col-2" placeholder="asd">
+                    <input type="date" class="col-1">
+                    <a href="#" class="col-1">Why do I need to provide my birthday?</a>
                 </div>
 
-                <div class="row">
-                    <select id="day" name="day" onload="javjscript:makeList(this, 30)">
-                        <option value="asd">asd</option>
-                    </select>
-                        <select id="month" name="day" onload="javjscript:makeList(this, 30)">
-                            <option value="asd">asd</option>
-                        </select>
-                            <select id="year" name="day" onload="javjscript:makeList(this, 30)">
-                                <option value="asd">asd</option>
-                            </select>
-                    <input type="select" name="" value="">
+                <div>
+                        <label for="female">
+                            <input id="female" type="radio" name="gender">Female
+                        </label>
+                        <label for="male">
+                            <input id="male" type="radio" name="gender">Male
+                        </label>
                 </div>
+                <p>By clicking Sign Up, you agree to our <a href="#">Terms</a>. Learn how we collect, use and share your data in our <a href="#">Data Policy</a> and how we use cookies and similar technology in our <a href="#">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time.</p>
+                <input type="submit" value="Sign up"></input>
             </form>
+            <p><a href="#">Create a Page</a> for a celebrity, band or business.</p>
 
         </div>
-        <div class="footer">Footer</div>
-        <div class="nothing1"></div>
-        <div class="nothing2"></div>
-    </div>
-
+        <div class="footer">
+            <div>
+                <span>English (US)</span>
+                <a href="#" title="Română">Română</a>
+                <a href="#" title="Magyar">Magyar</a>
+                <a href="#" title="Italiano">Italiano</a>
+                <a href="#" title="Español (España)">Español (España)</a>
+                <a href="#" title="Français (France)">Français (France)</a>
+                <a href="#" title="Deutsch">Deutsch</a>
+                <a href="#" title="Türkçe">Türkçe</a>
+                <a href="#" title="Português (Brasil)">Português (Brasil)</a>
+            </div>
+            <div>
+                <a href="#" title="Sign Up">Sign Up</a>
+                <a href="#" title="Log In">Log In</a>
+                <a href="#" title="Messenger">Messenger</a>
+                <a href="#" title="Facebook Lite">Facebook Lite</a>
+                <a href="#" title="Find Friends">Find Friends</a>
+                <a href="#" title="People">People</a>
+                <a href="#" title="Profiles">Profiles</a>
+                <a href="#" title="Pages">Pages</a>
+                <a href="#" title="Page Categories">Page Categories</a>
+                <a href="#" title="Places">Places</a>
+                <a href="#" title="Games">Games</a>
+                <a href="#" title="Locations">Locations</a>
+                <a href="#" title="Marketplace">Marketplace</a>
+                <a href="#" title="Groups">Groups</a>
+                <a href="#" title="Instagram">Instagram</a>
+                <a href="#" title="Local">Local</a>
+                <a href="#" title="Fundraisers">Fundraisers</a>
+                <a href="#" title="Events">Events</a>
+                <a href="#" title="About">About</a>
+                <a href="#" title="Create Ad">Create Ad</a>
+                <a href="#" title="Create Page">Create Page</a>
+                <a href="#" title="Developers">Developers</a>
+                <a href="#" title="Careers">Careers</a>
+                <a href="#" title="Privacy">Privacy</a>
+                <a href="#" title="Cookies">Cookies</a>
+                <a href="#" title="Ad Choices">Ad Choices</a>
+                <a href="#" title="Terms">Terms</a>
+                <a href="#" title="Account Security">Account Security</a>
+                <a href="#" title="Login Help">Login Help</a>
+                <a href="#" title="Help">Help</a>
+                <a href="#" title="Settings">Settings</a>
+                <a href="#" title="Activity Log">Activity Log</a>
+            </div>
+            <div>
+                <span>Facebook © 2019</span>
+            </div>
+        </div>
+        <div class="nothing1 blue"></div>
+        <div class="nothing2 blue"></div>
+        <div class="nothing3 grey"></div>
+        <div class="nothing4 grey"></div>
+        <div class="nothing5"></div>
+        <div class="nothing6"></div>
+    </div
 
 </body>
 
