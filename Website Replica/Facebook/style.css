@@ -239,19 +239,22 @@ a:hover, a:active {
 .nothing2 {
     grid-area: nothing2;
 }
+
 .nothing3 {
     grid-area: nothing3;
 }
+
 .nothing4 {
     grid-area: nothing4;
 }
+
 .nothing5 {
     grid-area: nothing5;
 }
+
 .nothing6 {
     grid-area: nothing6;
 }
-
 
 .blue {
     background-color: #3C5B9A;
@@ -260,6 +263,7 @@ a:hover, a:active {
 .grey {
     background-color: #EDF0F5;
 }
+
 .grid-container {
     display: grid;
     grid-template-areas:
@@ -273,7 +277,6 @@ a:hover, a:active {
     text-align: center;
 }
 
-
 @media (max-width : 900px) {
     .grid-container {
         grid-template-areas:
@@ -284,12 +287,15 @@ a:hover, a:active {
             'nothing5 footer nothing6';
         grid-template-columns: auto 365px auto;
     }
+
     .login>.flex-container>div>* {
         width: 110px;
     }
+
     .login>.flex-container>div>input[type="submit"] {
         width: 60px;
     }
+
     .logo>h1 {
         position: relative;
     }
