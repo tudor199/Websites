@@ -1,45 +1,45 @@
 .container {
-    width: 400px;
-    background-color: #f1f1f1;
+  width: 400px;
+  background-color: #f1f1f1;
 }
 
 h1 {
-    padding: 20px 5px;
+  padding: 20px 5px;
 }
 
 p {
-    text-align: center;
+  text-align: center;
 }
 
 #list {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 li.listElement {
-    background-color: white;
-    display: block;
-    border: 1px solid #dddddd;
-    padding: 20px;
+  background-color: white;
+  display: block;
+  border: 1px solid #dddddd;
+  padding: 20px;
 }
 
 li.listElement span {
-    float: right;
-    cursor: pointer;
+  float: right;
+  cursor: pointer;
 }
 
 #item {
-    margin: 20px 0px 20px 20px;
-    padding: 10px;
-    width: 280px;
-    border-style: none;
+  margin: 20px 0px 20px 20px;
+  padding: 10px;
+  width: 280px;
+  border-style: none;
 }
 
 #btn {
-    margin: 0;
-    padding: 10px;
-    width: 50px;
-    border-style: none;
-    color: white;
-    background-color: #4caf50;
+  margin: 0;
+  padding: 10px;
+  width: 50px;
+  border-style: none;
+  color: white;
+  background-color: #4caf50;
 }

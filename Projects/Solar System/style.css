@@ -1,25 +1,25 @@
 .overflow {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
 h1.text-responsive {
-    text-align: center;
-    font-size: 3rem;
+  text-align: center;
+  font-size: 3rem;
 }
 
 h2.text-responsive {
-    text-align: center;
-    font-size: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 450px) {
-    h1.text-responsive {
-        text-align: center;
-        font-size: 2rem;
-    }
+  h1.text-responsive {
+    text-align: center;
+    font-size: 2rem;
+  }
 
-    h2.text-responsive {
-        text-align: center;
-        font-size: 1rem;
-    }
+  h2.text-responsive {
+    text-align: center;
+    font-size: 1rem;
+  }
 }

@@ -1,5 +1,5 @@
 "use strict";
 
 function clickMe() {
-    alert("You clicked me");
+  alert("You clicked me");
 }

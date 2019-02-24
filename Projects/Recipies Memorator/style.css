@@ -1,26 +1,26 @@
 .container {
-    width: 400px;
-    background-color: #f1f1f1;
-    float: left;
+  width: 400px;
+  background-color: #f1f1f1;
+  float: left;
 }
 
 p {
-    text-align: center;
-    margin-top: 26px;
+  text-align: center;
+  margin-top: 26px;
 }
 
 h1 {
-    padding: 10px 5px;
+  padding: 10px 5px;
 }
 
 .hand-cursor {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #hint_display {
-    position: absolute;
-    left: 0px;
-    width: 308px;
-    background-color: white;
-    z-index: 100;
+  position: absolute;
+  left: 0px;
+  width: 308px;
+  background-color: white;
+  z-index: 100;
 }
