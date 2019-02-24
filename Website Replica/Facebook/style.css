@@ -289,6 +289,7 @@ a:hover, a:active {
   }
 
   .login>.flex-container>div>* {
+    font-size: 0.75rem;
     width: 110px;
   }
 
