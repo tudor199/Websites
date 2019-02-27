@@ -89,7 +89,7 @@ app.controller("recipieCtrl", function($scope, $http, $timeout) {
     }
     var name = $scope.recipieName.toLowerCase();
     var ingredients_json = JSON.stringify($scope.ingredients);
-    $http.get("./DB_query.php?type=" + type + "&name=" + name + "&ingredients_json=" + ingredients_json).then(function(response) {
+    $http.get("./DB_query.php?type=" + type + "&name=" + name + "&ingredients=" + ingredients_json).then(function(response) {
       if (type == "add") {
         if (~~response.data != 0) {
           window.alert("Recipie already exists!");

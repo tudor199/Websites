@@ -5,6 +5,7 @@
 
 body {
   overflow-x: hidden;
+  margin: 0px;
 }
 
 a {
@@ -126,7 +127,6 @@ a:hover, a:active {
   padding: 10px 0px;
   display: inline;
   width: 48%;
-  /* TODO: solve border sizing */
 }
 
 .col-2 {
