@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
   require("../SQL_login.php");
 
   $conn = new mysqli($SQL_hostname, $SQL_username, $SQL_password, $SQL_database);

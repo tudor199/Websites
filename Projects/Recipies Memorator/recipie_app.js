@@ -68,7 +68,6 @@ app.controller("recipieCtrl", function($scope, $http, $timeout) {
   $scope.getHint = function(forSearch) {
     var pattern = (forSearch == "loadHint" ? $scope.hintPattern : $scope.recipieName);
     pattern += "%";
-    console.log(pattern);
     $http.get("./DB_query.php?type=hint&pattern=" + pattern).then(function(response) {
       if (forSearch == "loadHint") {
         document.getElementById("hint_display").style.top = "113px";

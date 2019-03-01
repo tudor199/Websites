@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
   session_start();
   $user =  ($_COOKIE["username"] ? $_COOKIE["username"] : $_SESSION["username"]);
   if ($user) {
