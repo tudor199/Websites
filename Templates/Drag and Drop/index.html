@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drag and Drop</title>
+  <!-- Local files -->
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+<div class="container">
+  <div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="element" draggable="true" ondragstart="drag(event)">
+    </div>
+  </div>
+  <div class="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+
+  <script src="./scripts.js"></script>
+
+</body>
+
+</html>
